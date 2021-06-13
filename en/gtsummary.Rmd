@@ -492,7 +492,7 @@ Receives **one** categorical variable (e.g., sex/gender).
 
 Descriptive statistics will be computed to each **category** (e.g., male, female).
 
-It's the first step to perform comparison tests between groups.
+It's the first step to perform comparison/association tests between groups.
 
 
 ```{r}
@@ -621,7 +621,7 @@ To check other available tests or to learn how to create a new test function, se
 
 #### `pvalue_fun`
 
-Used to round and format p-values. *Default* is 1 decimal digit
+Used to round and format p-values. *Default* is 1 decimal digit.
 
 This argument receives a function. You can use the [`gtsummary::style_pvalue()`](http://www.danieldsjoberg.com/gtsummary/reference/style_pvalue.html) function or you can create your own function.
 
@@ -810,7 +810,9 @@ knitr::include_graphics("img/fig22.png")
 
 ### How to save the table?
 
-The `gtsummary` package prints the tables in HTML format. We can save them in several formats (e.g., png, svg, pdf, Word).
+The `gtsummary` package prints the tables in HTML format.
+
+We can save them in several formats (e.g., png, svg, pdf, Word).
 
 We will focus on *Word* documents. [Click](http://www.danieldsjoberg.com/gtsummary/articles/rmarkdown.html) to learn how to save in other formats.
 
