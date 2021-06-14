@@ -414,7 +414,14 @@ knitr::include_graphics("img/fig10.png")
 
 #### `missing` and `missing_text`
 
-`missing` tells whether to display a row with the number of missing observations. *Default* is `TRUE`.
+`missing` tells whether to display a row with the number of missing observations. Allowed values are:
+
+- `"ifany"` (*default*): only display *if any* `NA` values
+
+- `"no"`: never display `NA` values
+
+- `"always"`: includes NA count row for all variables.
+
 
 `missing_text` changes the text label for the missing number row. *Default* is "Unknown".
 
@@ -499,11 +506,11 @@ knitr::include_graphics("img/fig13.png")
 
 #### `by`
 
-Receives **one** categorical variable (e.g., sex/gender).
+Receives **one** categorical variable (e.g., Treatment).
 
-Descriptive statistics will be computed to each **category** (e.g., male, female).
+Descriptive statistics will be computed to each **category** (e.g., Treatment A, Treatment B).
 
-It's the first step to perform comparison/association tests between groups.
+It's the first step to perform comparison/association tests.
 
 
 ```{r}
@@ -536,7 +543,7 @@ knitr::include_graphics("img/fig14.png")
 
 It's the `gtsummary`'s function to perform group comparisons and associations.
 
-Adds a p-value column automatically.
+Adds a *p-value* column automatically.
 
 It's used after the function `tbl_summary(..., by = cat_var)` (receives the `tbl_summary()` output).
 
@@ -630,11 +637,18 @@ To check other available tests or to learn how to create a new test function, se
 
 ---
 
+
 #### `pvalue_fun`
 
-Used to round and format p-values. *Default* is 1 decimal digit.
 
-This argument receives a function. You can use the [`gtsummary::style_pvalue()`](http://www.danieldsjoberg.com/gtsummary/reference/style_pvalue.html) function or you can create your own function.
+Function to round and format p-values. Default is [`gtsummary::style_pvalue()`](http://www.danieldsjoberg.com/gtsummary/reference/style_pvalue.html).
+
+The function must have:
+
+- **input**: a numeric vector (the numeric, exact p-value)
+
+- **output**: a string that is the rounded/formatted p-value
+
 
 ```{r}
 trial %>%
@@ -657,11 +671,8 @@ knitr::include_graphics("img/fig17.png")
 ```
 
 
-???
-É recomendado usar a função style_pvalue() porque criar uma outra função de p-value é difícil. Essa função já tem alguns padrões criados para facilitar.
-
-
 ---
+
 
 ### `add_overall()`
 
