@@ -54,6 +54,17 @@ class: slide-title
 
 ### What are the benefits?
 
+
+--
+
+```{r echo=FALSE, eval = TRUE, out.width="50%", fig.align='center'}
+knitr::include_graphics("img/spss-meme.jpg")
+```
+
+---
+
+### What are the benefits?
+
 .pull-left[
 - Minimization of errors
 
