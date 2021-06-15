@@ -149,6 +149,12 @@ trial %&gt;%
   tbl_summary()
 ```
 
+
+
+```r
+tbl_summary(trial)
+```
+
 ---
 
 &lt;img src="img/fig1.png" width="25%" style="display: block; margin: auto;" /&gt;
@@ -422,9 +428,9 @@ trial %&gt;%
 
 #### `digits`
 
-Specifies the decimal digits in the descriptive statistics.
+Specifies the number of decimal places for descriptive statistics.
 
-Use: `digits = variable_1 ~ #`, where # sets the amount of digits you want.
+Use: `digits = variable_1 ~ #`, where # sets the number of digits you want.
 
 
 
@@ -446,7 +452,7 @@ trial %&gt;%
 
 ---
 
-To determine the amount of decimal digits for **each** descriptive measure (e.g., *n*, mean and SD):
+To determine the number of decimal plances for **each** descriptive measure (e.g., *n*, mean and SD):
 
 
 
@@ -871,13 +877,13 @@ A new *Word* document will be created with the table inside.
 
 ### Tips
 
-- See the [package website](http://www.danieldsjoberg.com/gtsummary/index.html) to learn:
+See the [package website](http://www.danieldsjoberg.com/gtsummary/index.html) to learn:
 
-  - regression/survey design/time-to-event tables
+- Regression/survey design/time-to-event tables
 
-  - other useful functions (e.g., `tbl_merge`, `add_stat`)
+- Other useful functions (e.g., `tbl_merge`, `add_stat`)
   
-  - inline reporting (i.e., `inline_text()`)
+- Inline reporting (i.e., `inline_text()`)
   
 Books:
 
