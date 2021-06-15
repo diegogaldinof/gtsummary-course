@@ -266,7 +266,7 @@ There are different ways to use the syntax. Please, check the [manual](http://ww
 
 #### Continuous
 
-*Default* is median, 1st, and 3rd quartiles:
+*Default* is median (1st and 3rd quartiles):
 
 ```{r}
 trial %>%
@@ -513,9 +513,9 @@ knitr::include_graphics("img/fig13.png")
 
 Receives **one** categorical variable (e.g., Treatment).
 
-Descriptive statistics will be computed to each **category** (e.g., Treatment A, Treatment B).
+Computes the descriptive statistics for each **category** (e.g., Treatment A, Treatment B).
 
-It's the first step to perform comparison/association tests.
+It's the first step for performing comparison/association tests.
 
 
 ```{r}
@@ -746,7 +746,7 @@ knitr::include_graphics("img/fig19.png")
 
 ---
 
-### Miscellaneous
+### Extra
 
 - `bold_labels()`: **Bold** the **names** of the variables.
 
@@ -907,7 +907,7 @@ A new *Word* document will be created with the table inside.
 
 ### Tips
 
-See the [package website](http://www.danieldsjoberg.com/gtsummary/index.html) to learn:
+Check the [package website](http://www.danieldsjoberg.com/gtsummary/index.html) to learn:
 
 - Regression/survey design/time-to-event tables
 
